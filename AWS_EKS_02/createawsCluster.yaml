@@ -1,0 +1,14 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: example-voting-app
+  region: us-east-1 # Change to your region
+  version: "1.28" # Choose a version you want to use for your exam
+
+managedNodeGroups:
+- name: nodegroup-1
+  instanceType: t3.medium
+  desiredCapacity: 2
+  minSize: 1
+  maxSize: 3
